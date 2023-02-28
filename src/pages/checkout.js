@@ -230,7 +230,7 @@ const Checkout = () => {
                       <button
                         type="submit"
                         disabled={isEmpty || !stripe || isCheckoutSubmit}
-                        className="bg-green-500 hover:bg-green-600 border border-green-500 transition-all rounded py-3 text-center text-sm font-serif font-medium text-white flex justify-center w-full"
+                        className="bg-yellow-500 hover:bg-yellow-600 border border-yellow-500 transition-all rounded py-3 text-center text-sm font-serif font-medium text-white flex justify-center w-full"
                       >
                         Confirm Order{' '}
                         <span className="text-xl ml-2">
@@ -270,9 +270,9 @@ const Checkout = () => {
                 <div className="flex items-center mt-4 py-4 lg:py-4 text-sm w-full font-semibold text-heading last:border-b-0 last:text-base last:pb-0">
                   <form className="w-full">
                     {couponInfo.couponCode ? (
-                      <span className="bg-green-50 px-4 py-3 leading-tight w-full rounded-md flex justify-between">
+                      <span className="bg-yellow-50 px-4 py-3 leading-tight w-full rounded-md flex justify-between">
                         {' '}
-                        <p className="text-green-600">Coupon Applied </p>{' '}
+                        <p className="text-yellow-600">Coupon Applied </p>{' '}
                         <span className="text-red-500 text-right">
                           {couponInfo.couponCode}
                         </span>
@@ -283,11 +283,11 @@ const Checkout = () => {
                           ref={couponRef}
                           type="text"
                           placeholder="Input your coupon code"
-                          className="form-input py-2 px-3 md:px-4 w-full appearance-none transition ease-in-out border text-input text-sm rounded-md h-12 duration-200 bg-white border-gray-200 focus:ring-0 focus:outline-none focus:border-green-500 placeholder-gray-500 placeholder-opacity-75"
+                          className="form-input py-2 px-3 md:px-4 w-full appearance-none transition ease-in-out border text-input text-sm rounded-md h-12 duration-200 bg-white border-gray-200 focus:ring-0 focus:outline-none focus:border-yellow-500 placeholder-gray-500 placeholder-opacity-75"
                         />
                         <button
                           onClick={handleCouponCode}
-                          className="md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center border border-gray-200 rounded-md placeholder-white focus-visible:outline-none focus:outline-none px-5 md:px-6 lg:px-8 py-3 md:py-3.5 lg:py-3 mt-3 sm:mt-0 sm:ml-3 md:mt-0 md:ml-3 lg:mt-0 lg:ml-3 hover:text-white hover:bg-green-500 h-12 text-sm lg:text-base w-full sm:w-auto"
+                          className="md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center border border-gray-200 rounded-md placeholder-white focus-visible:outline-none focus:outline-none px-5 md:px-6 lg:px-8 py-3 md:py-3.5 lg:py-3 mt-3 sm:mt-0 sm:ml-3 md:mt-0 md:ml-3 lg:mt-0 lg:ml-3 hover:text-white hover:bg-yellow-500 h-12 text-sm lg:text-base w-full sm:w-auto"
                         >
                           Apply
                         </button>

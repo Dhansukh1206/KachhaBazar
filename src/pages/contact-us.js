@@ -19,8 +19,6 @@ const ContactUs = () => {
   } = useForm();
 
   const submitHandler = ({ name, email, subject, message }) => {
-    // you can use this data
-    // console.log(name, email, subject, message);
     notifySuccess(
       'your message sent successfully. We will contact you shortly.'
     );
@@ -36,12 +34,12 @@ const ContactUs = () => {
           <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-3 xl:gap-8 font-serif">
             {contactData.map((data) => (
               <div key={data.id} className="border p-10 rounded-lg text-center">
-                <span className="flex justify-center text-4xl text-green-500 mb-4">
+                <span className="flex justify-center text-4xl text-yellow-600 mb-4">
                   <data.icon />
                 </span>
                 <h5 className="text-xl mb-2 font-bold">{data.title}</h5>
                 <p className="mb-0 text-base opacity-90 leading-7">
-                  <a href={`mailto:${data.contact}`} className="text-green-500">
+                  <a href={`mailto:${data.contact}`} className="text-yellow-600">
                     {data.contact}
                   </a>{' '}
                   {data.info}
@@ -128,7 +126,7 @@ const ContactUs = () => {
                   <div className="relative">
                     <button
                       data-variant="flat"
-                      className="md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none bg-green-500 text-white px-5 md:px-6 lg:px-8 py-3 md:py-3.5 lg:py-3 hover:text-white hover:bg-green-600 h-12 mt-1 text-sm lg:text-base w-full sm:w-auto"
+                      className="md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none bg-yellow-500 text-white px-5 md:px-6 lg:px-8 py-3 md:py-3.5 lg:py-3 hover:text-white hover:bg-yellow-600 h-12 mt-1 text-sm lg:text-base w-full sm:w-auto"
                     >
                       Send Message
                     </button>

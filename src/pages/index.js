@@ -123,14 +123,4 @@ export const getStaticProps = async () => {
   };
 };
 
-// export const getServerSideProps = async () => {
-//   const products = await ProductServices.getAllProducts();
-
-//   return {
-//     props: {
-//       products,
-//     },
-//   };
-// };
-
 export default Home;

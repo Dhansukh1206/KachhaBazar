@@ -37,5 +37,6 @@ function reducer(state, action) {
 export const UserProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const value = { state, dispatch };
+  console.log('value', value)
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

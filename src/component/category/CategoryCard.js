@@ -31,7 +31,7 @@ const CategoryCard = ({ title, icon, nested }) => {
     <>
       <a
         onClick={showCategory}
-        className="p-2 flex items-center rounded-md hover:bg-gray-50 w-full hover:text-green-600"
+        className="p-2 flex items-center rounded-md hover:bg-gray-50 w-full hover:text-yellow-600"
         role="button"
       >
         <Image
@@ -41,7 +41,7 @@ const CategoryCard = ({ title, icon, nested }) => {
           alt={title}
           aria-hidden="true"
         />
-        <div className="inline-flex items-center justify-between ml-3 text-sm font-medium w-full hover:text-green-600">
+        <div className="inline-flex items-center justify-between ml-3 text-sm font-medium w-full hover:text-yellow-600">
           {title}
           <span className="transition duration-700 ease-in-out inline-flex loading-none items-end text-gray-400">
             {show ? <IoChevronDownOutline /> : <IoChevronForwardOutline />}
@@ -54,7 +54,7 @@ const CategoryCard = ({ title, icon, nested }) => {
             <li key={children}>
               <a
                 onClick={() => handleSubCategory(children)}
-                className="flex items-center font-serif py-1 text-sm text-gray-600 hover:text-green-600 cursor-pointer"
+                className="flex items-center font-serif py-1 text-sm text-gray-600 hover:text-yellow-600 cursor-pointer"
               >
                 <span className="text-xs text-gray-500 pr-1">
                   <IoRemoveSharp />

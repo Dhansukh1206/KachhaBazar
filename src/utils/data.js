@@ -168,7 +168,7 @@ const featurePromo = [
     title: 'Latest Offer',
     info: 'Upto 20% Off',
     icon: FiGift,
-    className: 'bg-green-100',
+    className: 'bg-yellow-100',
   },
 ];
 
@@ -179,7 +179,7 @@ const contactData = [
     info: 'Interactively grow empowered for process-centric total linkage.',
     icon: FiMail,
     contact: 'kachabazar@gmail.com',
-    className: 'bg-green-100',
+    className: 'bg-yellow-100',
   },
   {
     id: 2,

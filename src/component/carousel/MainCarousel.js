@@ -51,7 +51,7 @@ const MainCarousel = () => {
     >
       {sliderData.map((item, i) => (
         <div className="h-full relative rounded-lg overflow-hidden" key={i + 1}>
-          <div className="text-sm text-gray-600 hover:text-green-dark">
+          <div className="text-sm text-gray-600 hover:text-yellow-dark">
             <Image
               layout="responsive"
               width={950}
@@ -71,7 +71,7 @@ const MainCarousel = () => {
                 {item.info}
               </p>
               <Link href={item.url}>
-                <a className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-green-500 text-center rounded-md text-white hover:bg-green-600">
+                <a className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg-yellow-500 text-center rounded-md text-white hover:bg-yellow-600">
                   Shop Now
                 </a>
               </Link>

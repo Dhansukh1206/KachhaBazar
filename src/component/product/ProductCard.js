@@ -66,7 +66,7 @@ const ProductCard = ({ product }) => {
                     item.id === product._id && (
                       <div
                         key={item.id}
-                        className="h-9 w-auto flex flex-wrap items-center justify-evenly py-1 px-2 bg-green-500 text-white rounded"
+                        className="h-9 w-auto flex flex-wrap items-center justify-evenly py-1 px-2 bg-yellow-500 text-white rounded"
                       >
                         <button
                           onClick={() =>
@@ -98,7 +98,7 @@ const ProductCard = ({ product }) => {
                 onClick={() => generateCartItem(product)}
                 disabled={product.quantity < 1}
                 aria-label="cart"
-                className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-green-500 hover:border-green-500 hover:bg-green-500 hover:text-white transition-all"
+                className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-yellow-500 hover:border-yellow-500 hover:bg-yellow-500 hover:text-white transition-all"
               >
                 {' '}
                 <span className="text-xl">

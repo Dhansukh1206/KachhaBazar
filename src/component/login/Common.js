@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Switch } from '@headlessui/react';
-import { ImFacebook, ImGoogle } from 'react-icons/im';
-import { FiLock, FiMail, FiUser } from 'react-icons/fi';
+import React, { useState } from "react";
+import { Switch } from "@headlessui/react";
+import { ImFacebook, ImGoogle } from "react-icons/im";
+import { FiLock, FiMail, FiUser } from "react-icons/fi";
 
-import Error from '@component/form/Error';
-import InputArea from '@component/form/InputArea';
-import useLoginSubmit from '@hooks/useLoginSubmit';
+import Error from "@component/form/Error";
+import InputArea from "@component/form/InputArea";
+import useLoginSubmit from "@hooks/useLoginSubmit";
 
 const Common = ({ onShowRegister, setModalOpen }) => {
   const [enabled, setEnabled] = useState(false);
-  const { handleSubmit, submitHandler, handleGoogleSignIn, register, errors } =
+  const { handleSubmit, submitHandler, register, errors } =
     useLoginSubmit(setModalOpen);
 
   return (
@@ -37,20 +37,20 @@ const Common = ({ onShowRegister, setModalOpen }) => {
           <div className="form-group">
             <InputArea
               register={register}
-              defaultValue="justin@gmail.com"
-              label="Email"
-              name="email"
-              type="email"
-              placeholder="Email"
+              defaultValue="9016912527"
+              label="Mobile"
+              name="mobile"
+              type="mobile"
+              placeholder="Mobile"
               Icon={FiMail}
             />
-            <Error errorName={errors.email} />
+            <Error errorName={errors.mobile} />
           </div>
 
           <div className="form-group">
             <InputArea
               register={register}
-              defaultValue="12345678"
+              defaultValue="Yash@123"
               label="Password"
               name="password"
               type="password"
@@ -66,13 +66,13 @@ const Common = ({ onShowRegister, setModalOpen }) => {
                 checked={enabled}
                 onChange={setEnabled}
                 className={`${
-                  enabled ? 'bg-blue-600' : 'bg-gray-200'
+                  enabled ? "bg-blue-600" : "bg-gray-200"
                 } relative inline-flex items-center h-6 rounded-full w-11`}
               >
                 <span className="sr-only">Enable notifications</span>
                 <span
                   className={`${
-                    enabled ? 'translate-x-6' : 'translate-x-1'
+                    enabled ? "translate-x-6" : "translate-x-1"
                   } inline-block w-4 h-4 transform bg-white rounded-full`}
                 />
               </Switch>
@@ -88,27 +88,12 @@ const Common = ({ onShowRegister, setModalOpen }) => {
           </div>
           <button
             type="submit"
-            className="w-full text-center py-3 rounded bg-green-500 text-white hover:bg-green-600 transition-all focus:outline-none my-1"
+            className="w-full text-center py-3 rounded bg-yellow-500 text-white hover:bg-yellow-600 transition-all focus:outline-none my-1"
           >
             {onShowRegister ? <span>Login</span> : <span>Register</span>}
           </button>
         </div>
       </form>
-      <div className="my-8 after:bg-gray-100 before:bg-gray-100 fo10t-sans text-center font-medium">
-        OR
-      </div>
-
-      <div className="flex justify-between flex-col lg:flex-row">
-        <button className="text-sm inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-serif text-center justify-center rounded-md focus:outline-none text-gray-600 bg-gray-100 shadow-sm md:px-2 my-1 sm:my-1 md:my-1 lg:my-0 lg:px-3 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-blue-600 h-11 md:h-12 w-full mr-2">
-          <ImFacebook /> <span className="ml-2">Login With Facebook</span>
-        </button>
-        <button
-          onClick={handleGoogleSignIn}
-          className="text-sm inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-serif text-center justify-center rounded-md focus:outline-none text-gray-600 bg-gray-100 shadow-sm md:px-2 my-1 sm:my-1 md:my-1 lg:my-0 lg:px-3 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-red-500 h-11 md:h-12 w-full"
-        >
-          <ImGoogle /> <span className="ml-2">Login With Google</span>
-        </button>
-      </div>
     </>
   );
 };

@@ -21,12 +21,12 @@ const NavbarPromo = () => {
                     className="md:flex space-x-10 items-center"
                   >
                     <Popover className="relative font-serif">
-                      <Popover.Button className="group inline-flex items-center py-2 hover:text-green-600 focus:outline-none">
+                      <Popover.Button className="group inline-flex items-center py-2 hover:text-yellow-600 focus:outline-none">
                         <span className="font-serif text-sm font-medium">
                           Categories
                         </span>
                         <ChevronDownIcon
-                          className="ml-1 h-3 w-3 group-hover:text-green-600"
+                          className="ml-1 h-3 w-3 group-hover:text-yellow-600"
                           aria-hidden="true"
                         />
                       </Popover.Button>
@@ -49,21 +49,21 @@ const NavbarPromo = () => {
                     </Popover>
 
                     <Link href="/about-us">
-                      <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-green-600">
+                      <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-yellow-600">
                         About Us
                       </a>
                     </Link>
                     <Link href="/contact-us">
-                      <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-green-600">
+                      <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-yellow-600">
                         Contact Us
                       </a>
                     </Link>
 
                     <Popover className="relative font-serif">
-                      <Popover.Button className="group inline-flex items-center py-2 text-sm font-medium hover:text-green-600 focus:outline-none">
+                      <Popover.Button className="group inline-flex items-center py-2 text-sm font-medium hover:text-yellow-600 focus:outline-none">
                         <span>Pages</span>
                         <ChevronDownIcon
-                          className="ml-1 h-3 w-3 group-hover:text-green-600"
+                          className="ml-1 h-3 w-3 group-hover:text-yellow-600"
                           aria-hidden="true"
                         />
                       </Popover.Button>
@@ -82,14 +82,14 @@ const NavbarPromo = () => {
                               {pages.map((item) => (
                                 <span
                                   key={item.title}
-                                  className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-green-600"
+                                  className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-yellow-600"
                                 >
                                   <item.icon
                                     className="flex-shrink-0 h-4 w-4"
                                     aria-hidden="true"
                                   />
                                   <Link href={item.href}>
-                                    <a className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-green-600">
+                                    <a className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-yellow-600">
                                       {item.title}
                                     </a>
                                   </Link>
@@ -101,7 +101,7 @@ const NavbarPromo = () => {
                       </Transition>
                     </Popover>
                     <Link href="/offer">
-                      <a className="relative inline-flex items-center h-6 bg-red-100 font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-red-500 hover:text-green-600">
+                      <a className="relative inline-flex items-center h-6 bg-red-100 font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-red-500 hover:text-yellow-600">
                         Offers
                         <div className="absolute flex w-2 h-2 left-auto -right-1 -top-1">
                           <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-red-400 opacity-75"></span>
@@ -116,12 +116,12 @@ const NavbarPromo = () => {
           </div>
           <div className="flex">
             <Link href="/privacy-policy">
-              <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-green-600">
+              <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-yellow-600">
                 Privacy Policy
               </a>
             </Link>
             <Link href="/terms-and-conditions">
-              <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-green-600">
+              <a className="font-serif mx-4 py-2 text-sm font-medium hover:text-yellow-600">
                 Terms & Conditions
               </a>
             </Link>

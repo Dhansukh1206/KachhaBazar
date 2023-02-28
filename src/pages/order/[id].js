@@ -33,9 +33,9 @@ const Order = ({ params }) => {
         <Loading loading={loading} />
       ) : (
         <div className="max-w-screen-2xl mx-auto py-10 px-3 sm:px-6">
-          <div className="bg-green-100 rounded-md mb-5 px-4 py-3">
+          <div className="bg-yellow-100 rounded-md mb-5 px-4 py-3">
             <label>
-              <span className="font-bold text-green-600">Thank you !</span> Your
+              <span className="font-bold text-yellow-600">Thank you !</span> Your
               order have been received !
             </label>
           </div>
@@ -43,13 +43,13 @@ const Order = ({ params }) => {
             <Invoice data={data} printRef={componentRef} />
             <div className="bg-white p-8 rounded-b-xl">
               <div className="flex lg:flex-row md:flex-row sm:flex-row flex-col justify-between">
-                <button className="mb-3 sm:mb-0 md:mb-0 lg:mb-0 flex items-center justify-center bg-green-500 hover:bg-green-600 text-white transition-all font-serif text-sm font-semibold h-10 py-2 px-5 rounded-md">
+                <button className="mb-3 sm:mb-0 md:mb-0 lg:mb-0 flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 text-white transition-all font-serif text-sm font-semibold h-10 py-2 px-5 rounded-md">
                   Download Invoice{" "}
                   <span className="ml-2 text-base">
                     <IoCloudDownloadOutline />
                   </span>
                 </button>
-                <button className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white transition-all font-serif text-sm font-semibold h-10 py-2 px-5 rounded-md">
+                <button className="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 text-white transition-all font-serif text-sm font-semibold h-10 py-2 px-5 rounded-md">
                   <ReactToPrint
                     trigger={() => <p>Print Invoice</p>}
                     content={() => componentRef.current}

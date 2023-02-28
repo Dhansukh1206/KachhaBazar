@@ -52,7 +52,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
         <div className="mx-auto px-3 lg:px-10 max-w-screen-2xl">
           <div className="flex items-center pb-4">
             <ol className="flex items-center w-full overflow-hidden font-serif">
-              <li className="text-sm pr-1 transition duration-200 ease-in cursor-pointer hover:text-green-500 font-semibold">
+              <li className="text-sm pr-1 transition duration-200 ease-in cursor-pointer hover:text-yellow-500 font-semibold">
                 <Link href="/">
                   <a>Home</a>
                 </Link>
@@ -61,7 +61,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                 {" "}
                 <FiChevronRight />{" "}
               </li>
-              <li className="text-sm pl-1 transition duration-200 ease-in cursor-pointer hover:text-green-500 font-semibold line-clamp-1">
+              <li className="text-sm pl-1 transition duration-200 ease-in cursor-pointer hover:text-yellow-500 font-semibold line-clamp-1">
                 <a
                   onClick={() =>
                     router.push(
@@ -122,7 +122,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                       </p>
                       <button
                         onClick={handleAddItem}
-                        className="leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none bg-green-500 text-white px-5 md:px-6 lg:px-8 py-3 md:py-3.5 lg:py-3 mt-6 hover:text-white hover:bg-green-600 h-12 text-sm lg:text-base w-full sm:w-auto"
+                        className="leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none bg-yellow-500 text-white px-5 md:px-6 lg:px-8 py-3 md:py-3.5 lg:py-3 mt-6 hover:text-white hover:bg-yellow-600 h-12 text-sm lg:text-base w-full sm:w-auto"
                       >
                         Add to Cart
                       </button>
@@ -147,7 +147,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                           product
                         </p>
                         <ul className="flex mt-4">
-                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-green-500  mr-2 transition ease-in-out duration-500">
+                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-yellow-500  mr-2 transition ease-in-out duration-500">
                             <FacebookShareButton
                               url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
                               quote="KachaBazar"
@@ -155,7 +155,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                               <FacebookIcon size={32} round />
                             </FacebookShareButton>
                           </li>
-                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-green-500  mr-2 transition ease-in-out duration-500">
+                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-yellow-500  mr-2 transition ease-in-out duration-500">
                             <TwitterShareButton
                               url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
                               quote="KachaBazar"
@@ -163,7 +163,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                               <TwitterIcon size={32} round />
                             </TwitterShareButton>
                           </li>
-                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-green-500  mr-2 transition ease-in-out duration-500">
+                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-yellow-500  mr-2 transition ease-in-out duration-500">
                             <RedditShareButton
                               url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
                               quote="KachaBazar"
@@ -171,7 +171,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                               <RedditIcon size={32} round />
                             </RedditShareButton>
                           </li>
-                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-green-500  mr-2 transition ease-in-out duration-500">
+                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-yellow-500  mr-2 transition ease-in-out duration-500">
                             <WhatsappShareButton
                               url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
                               quote="KachaBazar"
@@ -179,7 +179,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                               <WhatsappIcon size={32} round />
                             </WhatsappShareButton>
                           </li>
-                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-green-500  mr-2 transition ease-in-out duration-500">
+                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg-yellow-500  mr-2 transition ease-in-out duration-500">
                             <LinkedinShareButton
                               url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
                               quote="KachaBazar"
@@ -252,7 +252,6 @@ export const getStaticProps = async (context) => {
   const product = await ProductServices.getProductBySlug(slug);
   const products = getAllProduct;
 
-  console.log("getProductBySlug", product);
   let relatedProduct = [];
   if (slug) {
     const selectProduct = products.find((product) => product.slug === slug);

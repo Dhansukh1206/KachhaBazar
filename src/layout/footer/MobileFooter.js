@@ -24,7 +24,7 @@ const MobileFooter = () => {
       <div className="flex flex-col h-full justify-between align-middle bg-white rounded cursor-pointer overflow-y-scroll flex-grow scrollbar-hide w-full">
         <CategoryDrawer className="w-6 h-6 drop-shadow-xl" />
       </div>
-      <footer className="lg:hidden fixed z-30 bottom-0 bg-green-500 flex items-center justify-between w-full h-16 px-3 sm:px-10">
+      <footer className="lg:hidden fixed z-30 bottom-0 bg-yellow-500 flex items-center justify-between w-full h-16 px-3 sm:px-10">
         <button
           aria-label="Bar"
           onClick={toggleCategoryDrawer}
@@ -67,10 +67,10 @@ const MobileFooter = () => {
                 />
               </a>
             </Link>
-          ) : userInfo?.name ? (
+          ) : userInfo?.data?.formName ? (
             <Link href="/user/dashboard">
               <a className="leading-none font-bold font-serif block">
-                {userInfo?.name[0]}
+                {userInfo?.data?.formName}
               </a>
             </Link>
           ) : (

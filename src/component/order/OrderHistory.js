@@ -20,7 +20,7 @@ const OrderHistory = ({ order }) => {
       </td>
       <td className="px-5 py-3 leading-6 text-center whitespace-nowrap font-medium text-sm">
         {order.status === 'Delivered' && (
-          <span className="text-green-500">{order.status}</span>
+          <span className="text-yellow-500">{order.status}</span>
         )}
         {order.status === 'Pending' && (
           <span className="text-orange-500">{order.status}</span>

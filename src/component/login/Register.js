@@ -19,7 +19,7 @@ const Register = ({ onShowLogin, setModalOpen }) => {
             Already have a account ?
             <button
               onClick={() => onShowLogin(false)}
-              className="text-gray-800 hover:text-green-500 font-bold mx-2"
+              className="text-gray-800 hover:text-yellow-500 font-bold mx-2"
             >
               Login
             </button>

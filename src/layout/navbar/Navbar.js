@@ -1,23 +1,23 @@
-import { useContext, useEffect, useState } from 'react';
-import Cookies from 'js-cookie';
-import Link from 'next/link';
-import Image from 'next/image';
-import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
-import { useCart } from 'react-use-cart';
-import { IoSearchOutline } from 'react-icons/io5';
-import { FiShoppingCart, FiUser, FiBell } from 'react-icons/fi';
+import { useContext, useEffect, useState } from "react";
+import Cookies from "js-cookie";
+import Link from "next/link";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
+import { useCart } from "react-use-cart";
+import { IoSearchOutline } from "react-icons/io5";
+import { FiShoppingCart, FiUser, FiBell } from "react-icons/fi";
 
 //internal import
-import NavbarPromo from '@layout/navbar/NavbarPromo';
-import { UserContext } from '@context/UserContext';
-import LoginModal from '@component/modal/LoginModal';
-import CartDrawer from '@component/drawer/CartDrawer';
-import { SidebarContext } from '@context/SidebarContext';
+import NavbarPromo from "@layout/navbar/NavbarPromo";
+import { UserContext } from "@context/UserContext";
+import LoginModal from "@component/modal/LoginModal";
+import CartDrawer from "@component/drawer/CartDrawer";
+import { SidebarContext } from "@context/SidebarContext";
 
 const Navbar = () => {
-  const [imageUrl, setImageUrl] = useState('');
-  const [searchText, setSearchText] = useState('');
+  const [imageUrl, setImageUrl] = useState("");
+  const [searchText, setSearchText] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
   const { toggleCartDrawer } = useContext(SidebarContext);
   const { totalItems } = useCart();
@@ -31,16 +31,16 @@ const Navbar = () => {
     e.preventDefault();
     if (searchText) {
       router.push(`/search?query=${searchText}`, null, { scroll: false });
-      setSearchText('');
+      setSearchText("");
     } else {
       router.push(`/ `, null, { scroll: false });
-      setSearchText('');
+      setSearchText("");
     }
   };
 
   useEffect(() => {
-    if (Cookies.get('userInfo')) {
-      const user = JSON.parse(Cookies.get('userInfo'));
+    if (Cookies.get("userInfo")) {
+      const user = JSON.parse(Cookies.get("userInfo"));
       setImageUrl(user.image);
     }
   }, []);
@@ -52,15 +52,18 @@ const Navbar = () => {
         <LoginModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       )}
 
-      <div className="bg-green-500 sticky top-0 z-20">
+      <div
+        className="bg-yellow-500 sticky top-0 z-20"
+        style={{ backgroundColor: "#f28c3c" }}
+      >
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10">
           <div className="top-bar h-16 lg:h-auto flex items-center justify-between py-4 mx-auto">
             <Link href="/">
-              <a className="mr-3 lg:mr-12 xl:mr-12 hidden md:hidden lg:block">
+              <a className="mr-2 lg:mr-12 xl:mr-12 hidden md:hidden lg:block">
                 <Image
-                  width={110}
-                  height={40}
-                  src="/logo/logo-light.svg"
+                  width={50}
+                  height={45}
+                  src="/logo/1DealLogo.png"
                   alt="logo"
                 />
               </a>
@@ -93,7 +96,7 @@ const Navbar = () => {
             </div>
             <div className="hidden md:hidden md:items-center lg:flex xl:block absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button
-                className="pr-5 text-white text-2xl font-bold"
+                className="pr-3 text-white text-2xl font-bold"
                 aria-label="Alert"
               >
                 <FiBell className="w-6 h-6 drop-shadow-xl" />
@@ -101,7 +104,7 @@ const Navbar = () => {
               <button
                 aria-label="Total"
                 onClick={toggleCartDrawer}
-                className="relative px-5 text-white text-2xl font-bold"
+                className="relative px-3 text-white text-2xl font-bold"
               >
                 <span className="absolute z-10 top-0 right-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
                   {totalItems}
@@ -111,7 +114,7 @@ const Navbar = () => {
               {/* Profile dropdown */}
 
               <button
-                className="pl-5 text-white text-2xl font-bold"
+                className="pl-3 text-white text-2xl font-bold"
                 aria-label="Login"
               >
                 {imageUrl || userInfo?.image ? (
@@ -126,10 +129,10 @@ const Navbar = () => {
                       />
                     </a>
                   </Link>
-                ) : userInfo?.name ? (
+                ) : userInfo?.data?.formName ? (
                   <Link href="/user/dashboard">
                     <a className="leading-none font-bold font-serif block">
-                      {userInfo?.name[0]}
+                      {userInfo?.data?.formName[0].toUpperCase()}
                     </a>
                   </Link>
                 ) : (

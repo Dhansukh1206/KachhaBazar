@@ -92,25 +92,25 @@ const Coupon = () => {
                             Inactive
                           </span>
                         ) : (
-                          <span className="text-green-600 inline-block">
+                          <span className="text-yellow-600 inline-block">
                             Active
                           </span>
                         )}
                       </div>
                     </div>
 
-                    <div className="font-serif border border-dashed bg-green-50 py-2 border-green-300 rounded-lg text-center block">
+                    <div className="font-serif border border-dashed bg-yellow-50 py-2 border-yellow-300 rounded-lg text-center block">
                       <CopyToClipboard
                         text={coupon.couponCode}
                         onCopy={() => handleCopied(coupon.couponCode)}
                       >
                         <button className="block w-full">
                           {copied && copiedCode === coupon.couponCode ? (
-                            <span className="text-green-600 text-base leading-7 font-semibold">
+                            <span className="text-yellow-600 text-base leading-7 font-semibold">
                               Copied!
                             </span>
                           ) : (
-                            <span className="uppercase font-serif font-semibold text-base leading-7 text-green-600">
+                            <span className="uppercase font-serif font-semibold text-base leading-7 text-yellow-600">
                               {coupon.couponCode}{" "}
                             </span>
                           )}

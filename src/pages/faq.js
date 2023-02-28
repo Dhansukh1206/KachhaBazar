@@ -21,11 +21,11 @@ const Faq = () => {
               <Disclosure>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-green-500 bg-gray-50 hover:bg-green-50 rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-yellow-500 bg-gray-50 hover:bg-yellow-50 rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                       <span>How does the kachabazar work?</span>
                       <ChevronUpIcon
                         className={`${
-                          open ? 'transform rotate-180 text-green-500' : ''
+                          open ? 'transform rotate-180 text-yellow-500' : ''
                         } w-5 h-5 text-gray-500`}
                       />
                     </Disclosure.Button>
@@ -44,11 +44,11 @@ const Faq = () => {
               <Disclosure as="div" className="mt-2">
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-green-500 bg-gray-50 hover:bg-green-50 rounded-lg focus:outline-none">
+                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-yellow-500 bg-gray-50 hover:bg-yellow-50 rounded-lg focus:outline-none">
                       <span>Can I cancel my subscription anytime?</span>
                       <ChevronUpIcon
                         className={`${
-                          open ? 'transform rotate-180 text-green-500' : ''
+                          open ? 'transform rotate-180 text-yellow-500' : ''
                         } w-5 h-5 text-gray-500`}
                       />
                     </Disclosure.Button>
@@ -68,11 +68,11 @@ const Faq = () => {
               <Disclosure as="div" className="mt-2">
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-green-500 bg-gray-50 hover:bg-green-50 rounded-lg focus:outline-none">
+                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-yellow-500 bg-gray-50 hover:bg-yellow-50 rounded-lg focus:outline-none">
                       <span>Whice payment method you should accept?</span>
                       <ChevronUpIcon
                         className={`${
-                          open ? 'transform rotate-180 text-green-500' : ''
+                          open ? 'transform rotate-180 text-yellow-500' : ''
                         } w-5 h-5 text-gray-500`}
                       />
                     </Disclosure.Button>
@@ -91,11 +91,11 @@ const Faq = () => {
               <Disclosure as="div" className="mt-2">
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-green-500 bg-gray-50 hover:bg-green-50 rounded-lg focus:outline-none">
+                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-yellow-500 bg-gray-50 hover:bg-yellow-50 rounded-lg focus:outline-none">
                       <span>Can I cancel my subscription anytime?</span>
                       <ChevronUpIcon
                         className={`${
-                          open ? 'transform rotate-180 text-green-500' : ''
+                          open ? 'transform rotate-180 text-yellow-500' : ''
                         } w-5 h-5 text-gray-500`}
                       />
                     </Disclosure.Button>
@@ -113,11 +113,11 @@ const Faq = () => {
               <Disclosure as="div" className="mt-2">
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-green-500 bg-gray-50 hover:bg-green-50 rounded-lg focus:outline-none">
+                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-yellow-500 bg-gray-50 hover:bg-yellow-50 rounded-lg focus:outline-none">
                       <span>What is kachabazar EC2 auto scaling?</span>
                       <ChevronUpIcon
                         className={`${
-                          open ? 'transform rotate-180 text-green-500' : ''
+                          open ? 'transform rotate-180 text-yellow-500' : ''
                         } w-5 h-5 text-gray-500`}
                       />
                     </Disclosure.Button>
@@ -135,13 +135,13 @@ const Faq = () => {
               <Disclosure as="div" className="mt-2">
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-green-500 bg-gray-50 hover:bg-green-50 rounded-lg focus:outline-none">
+                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-yellow-500 bg-gray-50 hover:bg-yellow-50 rounded-lg focus:outline-none">
                       <span>
                         What are the benefits of using kachabazar affliate?
                       </span>
                       <ChevronUpIcon
                         className={`${
-                          open ? 'transform rotate-180 text-green-500' : ''
+                          open ? 'transform rotate-180 text-yellow-500' : ''
                         } w-5 h-5 text-gray-500`}
                       />
                     </Disclosure.Button>
@@ -159,11 +159,11 @@ const Faq = () => {
               <Disclosure>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-green-500 bg-gray-50 hover:bg-green-50 rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-yellow-500 bg-gray-50 hover:bg-yellow-50 rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                       <span>What is a affliates product configuration?</span>
                       <ChevronUpIcon
                         className={`${
-                          open ? 'transform rotate-180 text-green-500' : ''
+                          open ? 'transform rotate-180 text-yellow-500' : ''
                         } w-5 h-5 text-gray-500`}
                       />
                     </Disclosure.Button>
@@ -182,14 +182,14 @@ const Faq = () => {
               <Disclosure as="div" className="mt-2">
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-green-500 bg-gray-50 hover:bg-green-50 rounded-lg focus:outline-none">
+                    <Disclosure.Button className="flex justify-between w-full px-4 py-3 text-base font-medium text-left text-gray-600 focus:text-yellow-500 bg-gray-50 hover:bg-yellow-50 rounded-lg focus:outline-none">
                       <span>
                         What is fleet management and how is it different from
                         dynamic scaling?
                       </span>
                       <ChevronUpIcon
                         className={`${
-                          open ? 'transform rotate-180 text-green-500' : ''
+                          open ? 'transform rotate-180 text-yellow-500' : ''
                         } w-5 h-5 text-gray-500`}
                       />
                     </Disclosure.Button>

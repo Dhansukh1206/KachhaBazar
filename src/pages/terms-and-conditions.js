@@ -145,7 +145,7 @@ const TermAndConditions = () => {
                 <p>
                   Please read{' '}
                   <Link href="/privacy-policy">
-                    <a className="text-green-500">Privacy Policy</a>
+                    <a className="text-yellow-500">Privacy Policy</a>
                   </Link>{' '}
                 </p>
               </div>

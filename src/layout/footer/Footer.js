@@ -1,17 +1,17 @@
-import React, { useContext } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import dynamic from 'next/dynamic';
+import React, { useContext } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 import {
   FacebookIcon,
   LinkedinIcon,
   PinterestIcon,
   TwitterIcon,
   WhatsappIcon,
-} from 'react-share';
+} from "react-share";
 
 //internal import
-import { UserContext } from '@context/UserContext';
+import { UserContext } from "@context/UserContext";
 
 const Footer = () => {
   const {
@@ -26,9 +26,9 @@ const Footer = () => {
             <Link href="/">
               <a className="mr-3 lg:mr-12 xl:mr-12" rel="noreferrer">
                 <Image
-                  width={110}
-                  height={40}
-                  src="/logo/logo-color.svg"
+                  width={55}
+                  height={50}
+                  src="/logo/1DealLogo.png"
                   alt="logo"
                 />
               </a>
@@ -114,35 +114,35 @@ const Footer = () => {
             <ul className="text-sm flex flex-col space-y-3">
               <li className="flex items-baseline">
                 <Link href="/about-us">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     About Us
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link href="/contact-us">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Contact us
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link href="#">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Careers
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link href="#">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Latest news
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link href="/offer">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Latest Discount
                   </a>
                 </Link>
@@ -156,7 +156,7 @@ const Footer = () => {
             <ul className="text-sm lg:text-15px flex flex-col space-y-3">
               <li className="flex items-baseline">
                 <Link href="/search?Category=fish--meat">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Fish & Meat
                   </a>
                 </Link>
@@ -164,28 +164,28 @@ const Footer = () => {
 
               <li className="flex items-baseline">
                 <Link href="/search?Category=drinks">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Soft Drinks
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link href="search?Category=baby-care">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Baby Care
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link href="search?Category=beauty--health">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Beauty & Health
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link href="/search?Category=fruits--vegetable">
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Fruits & Vegetable
                   </a>
                 </Link>
@@ -198,40 +198,50 @@ const Footer = () => {
             </h3>
             <ul className="text-sm lg:text-15px flex flex-col space-y-3">
               <li className="flex items-baseline">
-                <Link href={`${userInfo?.email ? '/user/dashboard' : '#'}`}>
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                <Link
+                  href={`${userInfo?.data?.mobile ? "/user/dashboard" : "#"}`}
+                >
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Dashboard
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
-                <Link href={`${userInfo?.email ? '/user/my-orders' : '#'}`}>
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                <Link
+                  href={`${userInfo?.data?.mobile ? "/user/my-orders" : "#"}`}
+                >
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     My Orders
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
-                <Link href={`${userInfo?.email ? '/user/dashboard' : '#'}`}>
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                <Link
+                  href={`${userInfo?.data?.mobile ? "/user/dashboard" : "#"}`}
+                >
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Recent Orders
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link
-                  href={`${userInfo?.email ? '/user/update-profile' : '#'}`}
+                  href={`${
+                    userInfo?.data?.mobile ? "/user/update-profile" : "#"
+                  }`}
                 >
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Updated Profile
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
                 <Link
-                  href={`${userInfo?.email ? '/user/change-password' : '#'}`}
+                  href={`${
+                    userInfo?.data?.mobile ? "/user/change-password" : "#"
+                  }`}
                 >
-                  <a className="text-gray-600 inline-block w-full hover:text-green-500">
+                  <a className="text-gray-600 inline-block w-full hover:text-yellow-500">
                     Change Password
                   </a>
                 </Link>
@@ -244,12 +254,12 @@ const Footer = () => {
       <div className="border-t border-gray-100">
         <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 flex flex-col-reverse md:flex-row text-center items-center md:justify-between py-4">
           <p className="text-sm text-gray-500 eading-6">
-            Copyright 2021 @{' '}
+            Copyright 2021 @{" "}
             <Link href="https://themeforest.net/user/htmllover">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-500"
+                className="text-yellow-500"
               >
                 HtmlLover
               </a>

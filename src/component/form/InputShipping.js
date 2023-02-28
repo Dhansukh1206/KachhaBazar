@@ -29,7 +29,7 @@ const InputShipping = ({ register, value, time, cost, handleShippingCost }) => {
               name="shippingOption"
               type="radio"
               value={value}
-              className="form-radio outline-none focus:ring-0 text-green-500"
+              className="form-radio outline-none focus:ring-0 text-yellow-500"
             />
           </div>
         </label>

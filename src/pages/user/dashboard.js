@@ -38,8 +38,7 @@ const Dashboard = ({ title, description, children }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log("userSidebar", userSidebar);
-  console.log("done1");
+
   return (
     <Layout
       title={title ? title : "Dashboard"}
@@ -52,26 +51,26 @@ const Dashboard = ({ title, description, children }) => {
               {userSidebar.map((item) => (
                 <span
                   key={item.title}
-                  className="p-2 my-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-green-600"
+                  className="p-2 my-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-yellow-600"
                 >
                   <item.icon
                     className="flex-shrink-0 h-4 w-4"
                     aria-hidden="true"
                   />
                   <Link href={item.href}>
-                    <a className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-green-600">
+                    <a className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full hover:text-yellow-600">
                       {item.title}
                     </a>
                   </Link>
                 </span>
               ))}
-              <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-green-600">
+              <span className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full hover:text-yellow-600">
                 <span className="mr-2">
                   <IoLockOpenOutline />
-                </span>{" "}
+                </span>
                 <button
                   onClick={handleLogOut}
-                  className="inline-flex items-center justify-between text-sm font-medium w-full hover:text-green-600"
+                  className="inline-flex items-center justify-between text-sm font-medium w-full hover:text-yellow-600"
                 >
                   Logout
                 </button>
@@ -107,7 +106,7 @@ const Dashboard = ({ title, description, children }) => {
                     title="Complete Order"
                     Icon={FiCheck}
                     quantity={delivered.length}
-                    className="text-green-600 bg-green-200"
+                    className="text-yellow-600 bg-yellow-200"
                   />
                 </div>
                 <RecentOrder />

@@ -2,7 +2,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const instance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
+  baseURL: process.env.NEXT_PUBLIC_ONE_DEAL_BACKEND_BASE_URL,
   timeout: 500000,
   headers: {
     Accept: 'application/json',
@@ -26,7 +26,6 @@ instance.interceptors.request.use(function (config) {
   };
 });
 
-// console.log(process.env.API_BASE_URL);
 const responseBody = (response) => response.data;
 
 const requests = {

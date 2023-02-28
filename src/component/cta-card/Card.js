@@ -27,12 +27,12 @@ const Card = () => {
                 <div className="pl-4 pr-12 sm:pl-10 sm:pr-16">
                   <h2 className="font-serif text-base sm:text-lg md:text-lg lg:text-lg font-semibold text-gray-800">
                     {item.title} <br />
-                    <span className="text-lg sm:text-2xl md:text-2xl lg:text-2xl font-bold text-green-600">
+                    <span className="text-lg sm:text-2xl md:text-2xl lg:text-2xl font-bold text-yellow-600">
                       {item.subTitle}
                     </span>
                   </h2>
                   <p className="text-sm font-sans">Weekend discount offer</p>
-                  <button className="hidden sm:block lg:block text-xs leading-6 font-serif font-medium mt-5 px-4 py-1 bg-gray-50 text-center rounded-full hover:text-white hover:bg-green-600">
+                  <button className="hidden sm:block lg:block text-xs leading-6 font-serif font-medium mt-5 px-4 py-1 bg-gray-50 text-center rounded-full hover:text-white hover:bg-yellow-600">
                     Shop Now
                   </button>
                 </div>

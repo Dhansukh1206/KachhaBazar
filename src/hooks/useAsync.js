@@ -20,14 +20,12 @@ const useAsync = (asyncFunction) => {
       })
       .catch((err) => {
         if (!unmounted) {
-          console.log(err.message);
           setError(err.message);
           if (axios.isCancel(err)) {
             setError(err.message);
             setLoading(false);
             setData({});
           } else {
-            // console.log('another error happened:' + err.message);
             setError(err.message);
             setLoading(false);
             setData({});

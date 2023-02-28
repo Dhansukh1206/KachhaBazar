@@ -6,19 +6,19 @@ const OfferTimer = ({ expiryTimestamp }) => {
 
   return (
     <>
-      <span className="flex items-center justify-center bg-green-100 text-sm font-serif font-semibold px-2 py-1 rounded mx-1">
+      <span className="flex items-center justify-center bg-yellow-100 text-sm font-serif font-semibold px-2 py-1 rounded mx-1">
         {days}
       </span>
       :
-      <span className="flex items-center justify-center bg-green-100 text-sm font-serif font-semibold px-2 py-1 rounded mx-1">
+      <span className="flex items-center justify-center bg-yellow-100 text-sm font-serif font-semibold px-2 py-1 rounded mx-1">
         {hours}
       </span>
       :
-      <span className="flex items-center justify-center bg-green-100 text-sm font-serif font-semibold px-2 py-1 rounded mx-1">
+      <span className="flex items-center justify-center bg-yellow-100 text-sm font-serif font-semibold px-2 py-1 rounded mx-1">
         {minutes}
       </span>
       :
-      <span className="flex items-center justify-center bg-green-100 text-sm font-serif font-semibold px-2 py-1 rounded mx-1">
+      <span className="flex items-center justify-center bg-yellow-100 text-sm font-serif font-semibold px-2 py-1 rounded mx-1">
         {seconds}
       </span>
     </>
